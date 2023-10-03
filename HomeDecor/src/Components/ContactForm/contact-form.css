@@ -1,0 +1,81 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  max-width: 56.3rem;
+}
+
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  width: 100%;
+}
+
+.contact__inp {
+  border: 0.1rem solid var(--color-rose);
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1.7rem 2rem;
+  color: var(--color-grey);
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.ci {
+  height: 5.4rem;
+  width: 100%;
+}
+
+.modal__cont {
+  padding: 0 2rem;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.modal {
+  max-width: 44.6rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.5rem;
+  text-align: center;
+  align-items: center;
+  background-color: var(--color-bg);
+  padding: 4.6rem;
+  position: relative;
+}
+
+.modal__close {
+  background-color: transparent;
+  font-size: 2rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.modal p {
+  font-family: var(--title-font);
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.modal span {
+  opacity: 0.8;
+}
+
+.homepage {
+  width: 21.4rem;
+}
+
+@media (max-width: 350px) {
+  .modal {
+    padding: 1.5rem;
+    row-gap: 2.6rem;
+  }
+
+  .modal p {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,265 @@
+.nav {
+  margin-top: 2.7rem;
+}
+
+.nav__menu {
+  max-width: 68.2rem;
+  width: 100%;
+  margin: 0 auto;
+  column-gap: 7rem;
+  padding: 1rem 0;
+}
+
+.nav__menu-item {
+  position: relative;
+}
+
+.nav__menu-item > .active::after {
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--color-main);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav__menu-item a {
+  color: var(--color-black);
+}
+
+.navtop {
+  justify-content: space-between;
+  padding: 1.7rem 0;
+}
+
+.navtop__left {
+  column-gap: 3rem;
+}
+
+.lang {
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--color-rose);
+  color: var(--color-black);
+  font-size: 1.6rem;
+  font-family: Raleway;
+  padding: 0.5rem;
+}
+
+.search__area {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg);
+  padding: 0 2rem;
+}
+
+.search__active {
+  width: 100%;
+  height: 8rem;
+  background-color: transparent;
+  padding: 0 2rem;
+  font-size: 2rem;
+}
+
+input[type="search"]::placeholder {
+  font: normal normal 500 2rem/2.8rem var(--main-font);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.search__icon {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.search,
+.search__close {
+  font-size: 2.2rem;
+  background-color: transparent;
+}
+
+.navtop__logo {
+  width: 19.9rem;
+  height: 4rem;
+}
+
+.navtop__logo.active {
+  display: none;
+}
+
+.navtop__logo img {
+  object-fit: contain;
+}
+
+.navtop__right {
+  column-gap: 3rem;
+}
+
+.navtop__right > .search {
+  display: none;
+}
+
+.navtop__right > .search.active {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1.5rem;
+  width: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+}
+
+.bar {
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--color-black);
+  transition: 0.3s all ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translate(0, 5px) rotate(-47deg);
+  position: absolute;
+  top: 15px;
+  right: 5px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  position: absolute;
+  top: 20px;
+  opacity: 0;
+  right: 5px;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translate(0, -6px) rotate(47deg);
+  width: 100%;
+  position: absolute;
+  top: 26px;
+  right: 5px;
+}
+
+.navtop__right a {
+  color: var(--color-black);
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+.hamburger__langs {
+  max-width: 28.8rem;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  outline: 0.1rem solid var(--color-rose);
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header.container {
+    margin: 0;
+  }
+
+  .header {
+    background-color: var(--color-bg);
+    padding-bottom: 2rem;
+  }
+
+  .navtop__logo {
+    order: -1;
+    width: 15.7rem;
+    height: 4rem;
+  }
+
+  .navtop__left > .search {
+    display: none;
+  }
+
+  .navtop {
+    position: relative;
+  }
+
+  .lang {
+    display: none;
+  }
+
+  .nav__icon1,
+  .nav__icon2 {
+    display: none;
+    position: absolute;
+  }
+
+  .nav__icon1.active,
+  .nav__icon2.active {
+    display: block;
+  }
+
+  .nav__icon1 {
+    left: 1.6rem;
+    top: 2rem;
+  }
+
+  .nav__icon2 {
+    left: 5.6rem;
+    top: 2rem;
+  }
+
+  .navtop__right > .search {
+    display: block;
+  }
+
+  input[type="search"]::placeholder {
+    font: normal normal 500 1.6rem/2.8rem var(--main-font);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .heading__image {
+    place-content: center;
+  }
+
+  .nav {
+    margin-top: 0;
+  }
+
+  .nav > .nav__menu {
+    max-width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 3.4rem;
+    padding: 3.8rem 1.6rem 5rem;
+    background-color: var(--color-bg);
+    font-size: 3.2rem;
+  }
+
+  .nav > .nav__menu.active {
+    display: flex;
+  }
+
+  .hamburger__langs.active {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  .hamburger__langs > a {
+    width: 9.5rem;
+    height: 4.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-black);
+  }
+
+  .hamburger__langs > a.active {
+    background-color: var(--color-rose);
+  }
+}

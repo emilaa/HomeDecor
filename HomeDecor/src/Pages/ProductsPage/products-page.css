@@ -1,0 +1,227 @@
+.product {
+  margin-top: 5rem;
+}
+
+.product__title {
+  justify-content: space-between;
+}
+
+.product__sorting {
+  margin-top: 2.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+}
+
+.product__sorting-info {
+  max-width: 56rem;
+  opacity: 0.8;
+}
+
+.product__sorting-choices {
+  position: relative;
+  width: 33rem;
+}
+
+.sort {
+  justify-content: center;
+  border-radius: 1rem;
+  column-gap: 2rem;
+  color: var(--color-main);
+  font-weight: 500;
+  font-size: 1.6rem;
+  border: 0.1rem solid var(--color-main);
+  background-color: var(--color-bg);
+  width: 100%;
+  height: 5.4rem;
+  position: relative;
+  z-index: 600;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.sort__filter {
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  color: var(--color-main);
+  border-radius: 1rem;
+  border: 0.1rem solid var(--color-main);
+  width: 100%;
+  padding: 2.2rem 2rem;
+  font-weight: 500;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  z-index: 500;
+}
+
+.sort__filter > li {
+  cursor: pointer;
+}
+
+.product__content {
+  margin-top: 5.4rem;
+  display: grid;
+  column-gap: 10.8rem;
+  grid-template-columns: 1fr 5fr;
+}
+
+.sortby {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+}
+
+.sortby__list {
+  cursor: pointer;
+}
+
+.sortby__list > p {
+  color: var(--color-main);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sortby__list > svg {
+  display: none;
+}
+
+.sortby__items {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.sortby__items-list {
+  display: flex;
+  align-items: center;
+  column-gap: 2.5rem;
+}
+
+.categories__inp[type="checkbox"]:before {
+  position: relative;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid var(--color-main);
+  border-radius: 0.3rem;
+  content: "";
+  background-color: var(--color-bg);
+}
+
+.categories__inp[type="checkbox"]:after {
+  position: relative;
+  display: block;
+  left: 0;
+  bottom: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid var(--color-main);
+  border-radius: 0.3rem;
+  content: "";
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.categories__inp[type="checkbox"]:checked:after {
+  background-image: url("../../assets/images/Products/checked.png");
+}
+
+.product__content-right {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 32rem));
+  justify-content: center;
+  column-gap: 2rem;
+  row-gap: 4.5rem;
+}
+
+@media (max-width: 768px) {
+  .product__sorting-choices {
+    width: 100%;
+  }
+
+  .sort {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .sort > svg {
+    order: 2;
+  }
+
+  .product__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    margin-top: 1rem;
+  }
+
+  .product__sorting {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .sortby {
+    row-gap: 1rem;
+  }
+
+  .sortby > li {
+    height: 5.4rem;
+    width: 100%;
+  }
+
+  .sortby__main {
+    position: relative;
+    height: 100%;
+    z-index: 400;
+    overflow: -moz-hidden-unscrollable;
+  }
+
+  .sbm1 {
+    z-index: 300;
+  }
+
+  .sortby__list {
+    background-color: var(--color-bg);
+    justify-content: space-between;
+    border: 0.1rem solid var(--color-main);
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    padding: 0 2rem;
+    color: var(--color-main);
+  }
+
+  .sortby__items {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    background-color: var(--color-bg);
+    color: var(--color-main);
+    border-radius: 0 0 1rem 1rem;
+    border-left: 0.1rem solid var(--color-main);
+    border-right: 0.1rem solid var(--color-main);
+    border-bottom: 0.1rem solid var(--color-main);
+    width: 100%;
+    padding: 2.2rem 2rem;
+    z-index: 200;
+  }
+
+  .sbi1 {
+    z-index: 100;
+  }
+
+  .sortby__list > p {
+    font-size: 1.6rem;
+  }
+
+  .sortby__list > svg {
+    display: block;
+  }
+}
